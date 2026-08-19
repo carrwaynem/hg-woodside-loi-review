@@ -280,6 +280,62 @@
     flex-direction: column;
   }
 
+  /* ---------- Suggested redline text ---------- */
+
+  .redline {
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-left: 3px solid var(--fix);
+    border-radius: 0 3px 3px 0;
+    padding: 16px 18px;
+    margin: 10px 0 0 0;
+  }
+
+  .redline .k {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .redline p {
+    font-size: 14.5px;
+    font-style: italic;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .decision {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .decision:last-child { border-bottom: none; }
+
+  .decision .tag { width: fit-content; }
+
+  .decision h3 {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: normal;
+    margin: 4px 0 2px 0;
+    color: var(--ink);
+  }
+
+  .decision p.note {
+    margin: 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
   /* ---------- Closing ---------- */
 
   .closing {
@@ -334,7 +390,7 @@
 
   <div class="bottom-line">
     <p class="eyebrow">Bottom line</p>
-    <p>The revision moved the price terms in the right direction &mdash; the LOI's $400,000 now breaks down as $200k at closing / $200k at sale, which actually echoes Offer 1 instead of contradicting it. But the edit also introduced a new problem: <strong>the document now states two different numbers for the same payment</strong> ($200,000 on page 2, $150,000 on page 3). And the bigger question &mdash; is Marlon buying personally, or is this the family's own LLC &mdash; is still open.</p>
+    <p>The two structural questions from the last review are now decided: <strong>the family buys through their own LLC, and the second payment is $200,000.</strong> The LOI text itself hasn't caught up to either decision yet &mdash; the recitals, financing section, and signature block still describe a personal purchase by Marlon, and page 3 still shows $150,000. Suggested replacement language for each is below.</p>
   </div>
 
   <section>
@@ -368,8 +424,38 @@
   </section>
 
   <section>
-    <h2>The core conflict</h2>
-    <p class="lede">You wrote that the attached LOI formalizes Offer 1. The price now lines up. Buyer identity and financing still don't.</p>
+    <h2>Decisions confirmed &mdash; the draft needs to catch up</h2>
+    <p class="lede">Marlon has answered the two open structural questions. The LOI text itself hasn't been updated to match yet.</p>
+
+    <div class="decision">
+      <span class="tag tag-resolved">Decided</span>
+      <h3>Buyer is the family's LLC, not Marlon personally</h3>
+      <p class="note">This confirms Offer 1's structure over the LOI's current wording. Three places in the LOI need to change: the recitals (currently name Marlon as Buyer), the Financing section (currently describes a personal mortgage), and the signature block (currently has Marlon signing "on behalf of" an LLC he doesn't own &mdash; that language should flip so the LLC signs, with Marlon's role as the party arranging financing).</p>
+      <div class="redline">
+        <span class="k">Suggested &mdash; Recitals (replaces the "Marlon Meade ('Buyer')" opening paragraph)</span>
+        <p>"This letter sets forth the principal terms upon which [Bowen Family LLC &mdash; name TBD], an entity to be formed and wholly owned by the Bowen Family (&ldquo;Buyer&rdquo;), would be prepared to purchase the property commonly known as 97 Woodside Road, Maplewood, New Jersey 07040 (the &ldquo;Property&rdquo;) from the Estate of Luther Bowen (&ldquo;Seller&rdquo;), with financing arranged by Marlon Meade and his affiliated investor/lender as described in Section 3."</p>
+      </div>
+      <div class="redline">
+        <span class="k">Suggested &mdash; Section 3, Financing</span>
+        <p>"The purchase is proposed to be funded through investor/lender financing in the approximate amount of $300,000.00, arranged by Marlon Meade on Buyer's behalf and secured by the Property. This amount corresponds to the $200,000 payable to Seller at closing (Section 1) and the $100,000 to be escrowed toward construction costs under the parties' broader agreement." &mdash; note the $300k already reconciles exactly ($200k + $100k); it just needs to stop reading as a personal bank mortgage.</p>
+      </div>
+      <div class="redline">
+        <span class="k">Suggested &mdash; Signature block</span>
+        <p>"BUYER: [Bowen Family LLC name], an entity to be formed and wholly owned by the Bowen Family &mdash; By: ___ (authorized member), Name: [family member], Date: ___. Financing arranged by: Marlon Meade."</p>
+      </div>
+      <p class="note" style="margin-top: 10px;">Still needed from your side to finish this: the LLC's name (or "to be formed, name TBD" if it doesn't exist yet) and which family member will sign as its authorized member.</p>
+    </div>
+
+    <div class="decision">
+      <span class="tag tag-resolved">Decided</span>
+      <h3>The second payment is $200,000</h3>
+      <p class="note">Page 2 already had this right. Page 3 still says "$150,000" for the same payment &mdash; that's the number to fix. Since the family's split is confirmed higher than the $150k the profit paragraph was written against, worth rechecking whether "$250,000&ndash;$300,000 projected profit to invest in DC" on the same page still holds, or should come down closer to $200k&ndash;$250k.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The core conflict, as last reviewed</h2>
+    <p class="lede">Kept for reference &mdash; both rows below are now resolved by the decisions above, pending the redraft.</p>
     <div class="compare-wrap">
       <table class="compare">
         <thead>
@@ -383,22 +469,22 @@
           <tr>
             <th>Buyer</th>
             <td>An LLC owned by the Bowen family</td>
-            <td class="mismatch">Marlon Meade, personally (recitals) &mdash; "on behalf of future LLC" (signature block)</td>
+            <td>Confirmed &mdash; draft still names Marlon personally, needs redraft above</td>
           </tr>
           <tr>
             <th>Family gets</th>
-            <td>$200k now, $200k at sale (per p.2) or $150k (per p.3) &mdash; plus 50% of future DC profit</td>
-            <td>$200,000 at closing, $200,000 at sale &mdash; no profit share stated</td>
+            <td>$200k now, $200k at sale &mdash; plus 50% of future DC profit</td>
+            <td>Confirmed &mdash; page 3 still says $150k, needs correcting</td>
           </tr>
           <tr>
             <th>Funding source</th>
             <td>Private investor / lender</td>
-            <td class="mismatch">Conventional $300,000 mortgage</td>
+            <td>Reconciles with the $300k in Section 3 once relabeled &mdash; see redraft above</td>
           </tr>
           <tr>
             <th>Who owns the house after</th>
             <td>The family, via their LLC</td>
-            <td class="mismatch">Marlon, or an LLC "owned by the Bowen Family" &mdash; still contradicted in the signature block</td>
+            <td>Confirmed &mdash; signature block needs redraft above</td>
           </tr>
         </tbody>
       </table>
@@ -466,7 +552,7 @@
 
   <div class="closing">
     <p class="eyebrow">Before this goes out</p>
-    <p>Two things to settle before this reaches the family: fix the $200k/$150k contradiction so the document says one number, and confirm which structure this is actually meant to be &mdash; the joint venture where the family keeps Woodside through their own LLC, or a purchase by Marlon personally. Once both are settled, the loan terms and the Offer 2 numbers can be filled in and the whole thing rewritten so it says one consistent thing throughout.</p>
+    <p>The structure is settled &mdash; what's left is mechanical: drop in the redlined recitals, financing, and signature language above, fix page 3's $150,000 to $200,000, and supply the LLC's name and its authorized signer. After that, the loan terms and Offer 2's numbers are still the two open items worth closing before this reaches the family.</p>
   </div>
 
   <footer>Prepared by Hidden Gems &middot; internal review, not legal advice</footer>
