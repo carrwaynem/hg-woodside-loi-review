@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Woodside LOI Review</title>
+<meta name="description" content="A structural review of the 97 Woodside Road letter of intent, flagging where the formal terms contradict the deal outlined in Offer 1.">
+<style>
+  :root {
+    --bg: #EEF0EA;
+    --surface: #FBFCF8;
+    --surface-raised: #FFFFFF;
+    --ink: #23271F;
+    --ink-soft: #5B6357;
+    --ink-faint: #8A9184;
+    --line: #D6DBCE;
+    --line-strong: #B9C0AE;
+    --critical: #A8402A;
+    --critical-bg: #F7E9E3;
+    --critical-line: #D9A48F;
+    --gap: #9C6C1E;
+    --gap-bg: #F5EDDC;
+    --gap-line: #D9BC85;
+    --fix: #3D6E56;
+    --fix-bg: #E4EFE7;
+    --fix-line: #A9C7B6;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', Palatino, serif;
+    --mono: ui-monospace, 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1B1D18;
+      --surface: #23261F;
+      --surface-raised: #292C24;
+      --ink: #E9EBE2;
+      --ink-soft: #AEB5A3;
+      --ink-faint: #767D6E;
+      --line: #383C31;
+      --line-strong: #4A4F40;
+      --critical: #E08064;
+      --critical-bg: #322320;
+      --critical-line: #5C3A2E;
+      --gap: #D8AD5F;
+      --gap-bg: #322B1D;
+      --gap-line: #5A4A28;
+      --fix: #7EB79A;
+      --fix-bg: #1F2A23;
+      --fix-line: #385643;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+  }
+
+  body {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 28px 96px;
+  }
+
+  /* ---------- Masthead ---------- */
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 10px 0;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: normal;
+    font-size: clamp(30px, 5.5vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 6px 0;
+    color: var(--ink);
+  }
+
+  .subhead {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin: 0 0 32px 0;
+    font-style: italic;
+  }
+
+  .masthead-fields {
+    font-family: var(--mono);
+    font-size: 13px;
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
+    padding: 16px 0;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 16px;
+  }
+
+  .field .k {
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 10.5px;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .field .v {
+    color: var(--ink);
+  }
+
+  /* ---------- Bottom line ---------- */
+
+  .bottom-line {
+    background: var(--critical-bg);
+    border: 1px solid var(--critical-line);
+    border-radius: 3px;
+    padding: 22px 24px;
+    margin-bottom: 48px;
+  }
+
+  .bottom-line .eyebrow {
+    color: var(--critical);
+    margin-bottom: 8px;
+  }
+
+  .bottom-line p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  .bottom-line strong {
+    color: var(--critical);
+  }
+
+  /* ---------- Sections ---------- */
+
+  section {
+    margin-bottom: 52px;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: normal;
+    font-size: 23px;
+    letter-spacing: -0.005em;
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 10px;
+    margin: 0 0 20px 0;
+    color: var(--ink);
+  }
+
+  section > p.lede {
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    margin: 0 0 24px 0;
+  }
+
+  /* ---------- Comparison table ---------- */
+
+  .compare-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    background: var(--surface);
+  }
+
+  table.compare {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    min-width: 520px;
+  }
+
+  table.compare th, table.compare td {
+    text-align: left;
+    padding: 12px 16px;
+    vertical-align: top;
+  }
+
+  table.compare thead th {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-faint);
+    border-bottom: 1px solid var(--line-strong);
+    font-weight: normal;
+  }
+
+  table.compare thead th.col-loi { color: var(--critical); }
+
+  table.compare tbody tr:not(:last-child) td {
+    border-bottom: 1px solid var(--line);
+  }
+
+  table.compare tbody th {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-faint);
+    font-weight: normal;
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  table.compare td.mismatch {
+    color: var(--critical);
+  }
+
+  /* ---------- Findings list ---------- */
+
+  .finding {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .finding:last-child { border-bottom: none; }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    text-align: center;
+    height: fit-content;
+    white-space: nowrap;
+  }
+
+  .tag-gap { background: var(--gap-bg); color: var(--gap); border: 1px solid var(--gap-line); }
+  .tag-fix { background: var(--fix-bg); color: var(--fix); border: 1px solid var(--fix-line); }
+
+  .finding h3 {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: normal;
+    margin: 0 0 6px 0;
+    color: var(--ink);
+  }
+
+  .finding p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  .finding p + p { margin-top: 8px; }
+
+  .fixes-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---------- Closing ---------- */
+
+  .closing {
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    padding: 24px;
+  }
+
+  .closing .eyebrow { margin-bottom: 10px; }
+
+  .closing p {
+    margin: 0 0 12px 0;
+    font-size: 15.5px;
+    color: var(--ink);
+  }
+  .closing p:last-child { margin-bottom: 0; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 680px) {
+    .page { padding: 36px 18px 72px; }
+    h1 { font-size: 28px; }
+    .masthead-fields { grid-template-columns: 1fr; row-gap: 12px; }
+    .finding { grid-template-columns: 1fr; gap: 8px; }
+    .tag { justify-self: start; width: fit-content; }
+    h2 { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <p class="eyebrow">Document Review</p>
+  <h1>Letter of Intent Review</h1>
+  <p class="subhead">97 Woodside Road, Maplewood, NJ 07040</p>
+
+  <div class="masthead-fields">
+    <div class="field"><span class="k">Re</span><span class="v">Proposed purchase of 97 Woodside Road</span></div>
+    <div class="field"><span class="k">Date</span><span class="v">August 19, 2026</span></div>
+    <div class="field"><span class="k">Prepared for</span><span class="v">Marlon Meade</span></div>
+    <div class="field"><span class="k">Subject</span><span class="v">Estate of Luther Bowen</span></div>
+  </div>
+
+  <div class="bottom-line">
+    <p class="eyebrow">Bottom line</p>
+    <p>The offer you described to the Bowen family and the formal Letter of Intent attached to it <strong>are two different deals.</strong> The narrative promises the family keeps ownership through their own LLC, gets paid in installments, and shares in the profit. The signed document says you personally buy the house outright for $400,000 with a bank mortgage. Before this goes to the family, we need to settle which one it actually is.</p>
+  </div>
+
+  <section>
+    <h2>The core conflict</h2>
+    <p class="lede">You wrote that the attached LOI formalizes Offer 1. Read side by side, it doesn't — it reads like a standard cash purchase, not a joint venture.</p>
+    <div class="compare-wrap">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Offer 1, as described</th>
+            <th class="col-loi">The formal LOI (pp. 4–6)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Buyer</th>
+            <td>An LLC owned by the Bowen family</td>
+            <td class="mismatch">Marlon Meade, personally</td>
+          </tr>
+          <tr>
+            <th>Family gets</th>
+            <td>$200k now, $150k at sale, 50% of future DC profit</td>
+            <td class="mismatch">$400,000 flat, one time, no profit share</td>
+          </tr>
+          <tr>
+            <th>Funding source</th>
+            <td>Private investor / lender</td>
+            <td class="mismatch">Conventional $300,000 mortgage</td>
+          </tr>
+          <tr>
+            <th>Who owns the house after</th>
+            <td>The family, via their LLC</td>
+            <td class="mismatch">Marlon, or an LLC "owned by the Bowen Family" &mdash; contradicted in the signature block</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Other gaps worth flagging</h2>
+    <p class="lede">Even taken on its own, the LOI is missing terms a family (or their attorney) will ask about.</p>
+
+    <div class="finding">
+      <span class="tag tag-gap">Gap</span>
+      <div>
+        <h3>No loan terms anywhere</h3>
+        <p>Every version of this deal runs on "my investor/lender," but no interest rate, term, or security is ever stated &mdash; not for the $300k mortgage in the LOI, not for the private financing in Offer 1 or 2. This is the one place the family's own attorney will push hardest, especially given the whole pitch is built on not repeating what happened to other families.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="tag tag-gap">Gap</span>
+      <div>
+        <h3>Offer 2's numbers don't resolve</h3>
+        <p>"Pay an immediate $60,000 &hellip; take $250,000 out of Woodside" &mdash; is the $60k part of the $250k, or on top of it? As written, it can be read either way, and the two readings put very different amounts of debt on the house.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="tag tag-gap">Gap</span>
+      <div>
+        <h3>Woodside as collateral isn't disclosed</h3>
+        <p>Pulling $250,000 in equity to fund a DC flip means Woodside stands behind that loan. If the flip underperforms, the family's home is what's exposed. The document never says this plainly &mdash; it should, given the story you lead with is about protecting people from exactly that outcome.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="tag tag-gap">Gap</span>
+      <div>
+        <h3>No financing or inspection contingency</h3>
+        <p>Section 3 commits to a $300,000 mortgage; Section 4 is titled "Inspection and Due Diligence" but waives all contingencies. If the mortgage doesn't come through, there's no stated way out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Safe to fix now</h2>
+    <p class="lede">Lower stakes &mdash; these don't touch deal terms, so I can clean them up regardless of how the questions above resolve.</p>
+
+    <div class="fixes-list">
+      <div class="finding">
+        <span class="tag tag-fix">Fix</span>
+        <div>
+          <h3>"Acrchitect" in Section 2</h3>
+          <p>Typo, but also worth a second look: releasing an $8,000 earnest deposit to an architect is unusual. Likely meant to be the attorney or escrow/title company of record.</p>
+        </div>
+      </div>
+      <div class="finding">
+        <span class="tag tag-fix">Fix</span>
+        <div>
+          <h3>157 Parker Avenue's price is missing from the prose</h3>
+          <p>It's named as one of three key comps but only appears in the table. Adding the number in the paragraph makes the CMA read as more complete.</p>
+        </div>
+      </div>
+      <div class="finding">
+        <span class="tag tag-fix">Fix</span>
+        <div>
+          <h3>CMA leans on two outlier sales</h3>
+          <p>Boyden (33% over ask) and Fernwood (31% over ask) anchor the $850&ndash;925k ARV against a comp spread of $700k&ndash;$1M. Not wrong, but the framing could read as more conservative so it holds up to scrutiny.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="closing">
+    <p class="eyebrow">Before this goes out</p>
+    <p>Confirm which structure this is actually meant to be &mdash; the joint venture where the family keeps Woodside through their own LLC, or a straight $400,000 purchase by Marlon. Once that's settled, the loan terms and the Offer 2 numbers can be filled in and the whole thing rewritten so it says one consistent thing.</p>
+  </div>
+
+  <footer>Prepared by Hidden Gems &middot; internal review, not legal advice</footer>
+
+</div>
+</body>
+</html>
