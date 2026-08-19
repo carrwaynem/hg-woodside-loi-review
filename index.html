@@ -255,6 +255,8 @@
 
   .tag-gap { background: var(--gap-bg); color: var(--gap); border: 1px solid var(--gap-line); }
   .tag-fix { background: var(--fix-bg); color: var(--fix); border: 1px solid var(--fix-line); }
+  .tag-critical { background: var(--critical-bg); color: var(--critical); border: 1px solid var(--critical-line); }
+  .tag-resolved { background: var(--fix-bg); color: var(--fix); border: 1px solid var(--fix-line); }
 
   .finding h3 {
     font-family: var(--serif);
@@ -325,19 +327,49 @@
 
   <div class="masthead-fields">
     <div class="field"><span class="k">Re</span><span class="v">Proposed purchase of 97 Woodside Road</span></div>
-    <div class="field"><span class="k">Date</span><span class="v">August 19, 2026</span></div>
+    <div class="field"><span class="k">Date</span><span class="v">August 19, 2026 &middot; Revision 2</span></div>
     <div class="field"><span class="k">Prepared for</span><span class="v">Marlon Meade</span></div>
     <div class="field"><span class="k">Subject</span><span class="v">Estate of Luther Bowen</span></div>
   </div>
 
   <div class="bottom-line">
     <p class="eyebrow">Bottom line</p>
-    <p>The offer you described to the Bowen family and the formal Letter of Intent attached to it <strong>are two different deals.</strong> The narrative promises the family keeps ownership through their own LLC, gets paid in installments, and shares in the profit. The signed document says you personally buy the house outright for $400,000 with a bank mortgage. Before this goes to the family, we need to settle which one it actually is.</p>
+    <p>The revision moved the price terms in the right direction &mdash; the LOI's $400,000 now breaks down as $200k at closing / $200k at sale, which actually echoes Offer 1 instead of contradicting it. But the edit also introduced a new problem: <strong>the document now states two different numbers for the same payment</strong> ($200,000 on page 2, $150,000 on page 3). And the bigger question &mdash; is Marlon buying personally, or is this the family's own LLC &mdash; is still open.</p>
   </div>
 
   <section>
+    <h2>What changed in this revision</h2>
+    <p class="lede">Comparing this draft against the one reviewed above.</p>
+
+    <div class="finding">
+      <span class="tag tag-resolved">Resolved</span>
+      <div>
+        <h3>Purchase price now breaks down</h3>
+        <p>Section 1 went from a flat, unexplained $400,000 to "$200,000 at closing, $200,000 at the sale of Woodside Road" &mdash; now in the same shape as Offer 1's payout to the family, instead of reading like an unrelated cash sale.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="tag tag-resolved">Resolved</span>
+      <div>
+        <h3>"Architect" spelling fixed</h3>
+        <p>Section 2 now reads "released to the architect of record" &mdash; correctly spelled. Since the word itself was kept rather than swapped, this reads as intentional. Worth a quick verbal confirmation that the architect (not the attorney or an escrow/title company) is really meant to hold the $8,000 deposit, since that's still an unusual choice of party.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="tag tag-critical">New</span>
+      <div>
+        <h3>The document now contradicts itself on the same number</h3>
+        <p>Page 2 (Offer 1's description) was updated to "you split an additional <strong>$200,000</strong>." Page 3 (the profit-summary paragraph, same document) still reads "another <strong>$150,000</strong> in 6-8 months." Same payment, same offer &mdash; the edit updated one mention and missed the other.</p>
+        <p>Knock-on effect: if the family's split really is $200k now, the "$250,000&ndash;$300,000 projected profit to invest in DC" right below the $150k line hasn't been adjusted down for the extra $50k going to the family. Worth confirming that range still holds.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h2>The core conflict</h2>
-    <p class="lede">You wrote that the attached LOI formalizes Offer 1. Read side by side, it doesn't — it reads like a standard cash purchase, not a joint venture.</p>
+    <p class="lede">You wrote that the attached LOI formalizes Offer 1. The price now lines up. Buyer identity and financing still don't.</p>
     <div class="compare-wrap">
       <table class="compare">
         <thead>
@@ -351,12 +383,12 @@
           <tr>
             <th>Buyer</th>
             <td>An LLC owned by the Bowen family</td>
-            <td class="mismatch">Marlon Meade, personally</td>
+            <td class="mismatch">Marlon Meade, personally (recitals) &mdash; "on behalf of future LLC" (signature block)</td>
           </tr>
           <tr>
             <th>Family gets</th>
-            <td>$200k now, $150k at sale, 50% of future DC profit</td>
-            <td class="mismatch">$400,000 flat, one time, no profit share</td>
+            <td>$200k now, $200k at sale (per p.2) or $150k (per p.3) &mdash; plus 50% of future DC profit</td>
+            <td>$200,000 at closing, $200,000 at sale &mdash; no profit share stated</td>
           </tr>
           <tr>
             <th>Funding source</th>
@@ -366,7 +398,7 @@
           <tr>
             <th>Who owns the house after</th>
             <td>The family, via their LLC</td>
-            <td class="mismatch">Marlon, or an LLC "owned by the Bowen Family" &mdash; contradicted in the signature block</td>
+            <td class="mismatch">Marlon, or an LLC "owned by the Bowen Family" &mdash; still contradicted in the signature block</td>
           </tr>
         </tbody>
       </table>
@@ -418,13 +450,6 @@
       <div class="finding">
         <span class="tag tag-fix">Fix</span>
         <div>
-          <h3>"Acrchitect" in Section 2</h3>
-          <p>Typo, but also worth a second look: releasing an $8,000 earnest deposit to an architect is unusual. Likely meant to be the attorney or escrow/title company of record.</p>
-        </div>
-      </div>
-      <div class="finding">
-        <span class="tag tag-fix">Fix</span>
-        <div>
           <h3>157 Parker Avenue's price is missing from the prose</h3>
           <p>It's named as one of three key comps but only appears in the table. Adding the number in the paragraph makes the CMA read as more complete.</p>
         </div>
@@ -441,7 +466,7 @@
 
   <div class="closing">
     <p class="eyebrow">Before this goes out</p>
-    <p>Confirm which structure this is actually meant to be &mdash; the joint venture where the family keeps Woodside through their own LLC, or a straight $400,000 purchase by Marlon. Once that's settled, the loan terms and the Offer 2 numbers can be filled in and the whole thing rewritten so it says one consistent thing.</p>
+    <p>Two things to settle before this reaches the family: fix the $200k/$150k contradiction so the document says one number, and confirm which structure this is actually meant to be &mdash; the joint venture where the family keeps Woodside through their own LLC, or a purchase by Marlon personally. Once both are settled, the loan terms and the Offer 2 numbers can be filled in and the whole thing rewritten so it says one consistent thing throughout.</p>
   </div>
 
   <footer>Prepared by Hidden Gems &middot; internal review, not legal advice</footer>
